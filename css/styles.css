@@ -520,7 +520,7 @@ img {
 }
 
 
-/* ==== flex-контейнер в Секции ГЕРОЙ-ССЫЛКИ (filters) ===== */
+/* ==== flex-контейнер для кнопок в ГЕРОЙ-ССЫЛКИ (filters-list) ===== */
 .filters-list {
     display: flex;
     justify-content: center;
