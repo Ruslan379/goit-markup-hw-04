@@ -67,7 +67,7 @@ body {
         url("../images/bck-img.jpg");
     /* background-image: url("../images/bck-img.jpg"); */
 
-    /* background-color: var(--color-background-footer); */
+    background-color: var(--color-background-footer);
 
     background-repeat: no-repeat;
     background-position: center;
@@ -266,7 +266,7 @@ img {
     padding-bottom: 200px;
     text-align: center;
 
-    background-color: var(--color-background-footer);
+    /* background-color: var(--color-background-footer); */
 }
 
 
@@ -414,7 +414,7 @@ img {
 
 /* ============== Стилизация Секции Наша команда (team) ============== */
 .team {
-     background-color: var(--color-background-team);
+    background-color: var(--color-background-team);
 
     /* УБРАТЬ и оставить var(--color-background-team */
     /* background-color: goldenrod;  */
