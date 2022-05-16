@@ -13,6 +13,7 @@
     /* =============================== */
     --color-border-line: #ECECEC;
     --color-borders-portfolio: #EEEEEE;
+    --color-border-clients: #AFB1B8;
     /* =============================== */
     --color-logo-links-hover: #2196F3;
     --color-button-hover: #188CE8;
@@ -208,6 +209,38 @@ img {
     align-items: center;
 }
 
+/* ========= Иконки в Контакты (почта и телефон) в header ========== */
+.header-item {
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-contacts-link::before {
+    content: "";
+    display: inline-flex;
+    /* width: 16px; */
+    /* height: 12px; */
+    margin-right: 10px;
+    /* align-items: center; */
+    /* background-image: url("../svg/envelope.svg"); */
+    background-size: contain;
+
+    /* background-color: tomato; */
+}
+
+.email::before {
+    width: 16px;
+    height: 12px;
+    background-image: url("../svg/envelope.svg");
+}
+
+.tel::before {
+    width: 10px;
+    height: 16px;
+    /* align-items: center; */
+    background-image: url("../svg/smartphone.svg");
+}
+
 /* ==== Стилизация Кнопок Основного раздела навигации в header ===== */
 .nav-links {
     display: block;
@@ -238,12 +271,14 @@ img {
     color: var(--color-font-head);
 }
 
+
 /* ====  Hover & Focus на ссылках и Контактах (почта и телефон) в header === */
 .nav-links.activlink:hover,
 .nav-links.activlink:focus,
 
 .nav-links:hover,
 .nav-links:focus,
+
 
 .header-contacts-link:hover,
 .header-contacts-link:focus
@@ -331,17 +366,19 @@ img {
 /* ================ Стилизация Секции Наши особенности (features) ================ */
 
 /* ==== flex-контейнер в Секции Наши особенности (features) 1 вариант ===== */
-/* .features-list1 {
+/* .features-list {
     display: flex;
     justify-content: space-between;
 }
-.features-list1 .features-item1 {
+.features-list .features-item {
     width: 270px;
+
+    background-color: tomato;
 } */
 /* ____________________________________________________________________________ */
 
 
-/* ==== flex-контейнер в Секции Наши особенности (features) 1 вариант ===== */
+/* ==== flex-контейнер в Секции Наши особенности (features) 2 вариант ===== */
 .features-list {
     display: flex;
     gap: 30px;
@@ -352,11 +389,46 @@ img {
     /* УБРАТЬ */
     /* background-color: tomato; */
 }
+
+/* ============== Иконки в Секции Наши особенности (features) =============== */
+.features-item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    /* margin-bottom: 30px; */
+    /* padding: 25px 100px; */
+    /* background-image: url("../svg/antenna1.svg"); */
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-background-team);
+    
+    /* УБРАТЬ */
+    /* outline: 2px solid tomato;  */
+}
+
+.icon-features-first::before {
+    background-image: url("../svg/antenna1.svg");
+}
+
+.icon-features-second::before {
+    background-image: url("../svg/clock2.svg");
+}
+
+.icon-features-third::before {
+    background-image: url("../svg/diagram3.svg");
+}
+
+.icon-features-fourth::before {
+    background-image: url("../svg/astronaut4.svg");
+}
+
 /* ____________________________________________________________________________ */
 
 
 /* ==== Стилизация заголовка h3 в Наши особенности (features) ====*/
 .features-title {
+    margin-top: 30px;
     margin-bottom: 10px;
     font-size: inherit;
     line-height: 1.14;
@@ -416,8 +488,6 @@ img {
 .team {
     background-color: var(--color-background-team);
 
-    /* УБРАТЬ и оставить var(--color-background-team */
-    /* background-color: goldenrod;  */
 }
 
 /* ==== flex-контейнер в Секции Секции Наша команда (team) ===== */
@@ -463,8 +533,83 @@ img {
     
     background-color: var(--color-light);
 }
-
 /* ___________________  К О Н Е Ц  Блок-секция_4 Наша команда ______________________ */
+
+
+
+
+
+
+
+
+/* ============== Стилизация Секции_5 Наши клиенты (clients) ============== */
+
+
+/* ==== flex-контейнер в Секции Секции Наша команда (team) ===== */
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+
+    /* УБРАТЬ */
+    /* outline: 2px solid tomato;  */
+    /* background-color: rgb(7, 248, 168); */
+}
+
+.clients-item {
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid var(--color-border-clients);
+    border-radius: 4px;
+    
+    /* УБРАТЬ */
+    /* outline: 2px solid tomato; */
+    /* background-color: tomato; */
+}
+
+
+.clients-item>img {
+    
+
+        /* outline: 2px solid rgb(4, 0, 255); */
+}
+
+.clients-item.icon-clients1>img {
+    padding: 7px 32px;
+}
+
+.clients-item.icon-clients2>img {
+    padding: 4px 33px;
+}
+
+.clients-item.icon-clients3>img {
+    padding: 9px 30px;
+}
+
+.clients-item.icon-clients4>img {
+    padding: 9px 11px;
+}
+
+.clients-item.icon-clients5>img {
+    padding: 7px 22px;
+}
+
+.clients-item.icon-clients6>img {
+    padding: 8px 6px;
+}
+
+
+
+
+
+
+
+
+
+/* ___________________  К О Н Е Ц  Секции_5 Наши клиенты ______________________ */
 
 /* ____________________ К О Н Е Ц  ОСНОВНОГО Блока (main) ____________________ */
 
@@ -570,10 +715,10 @@ img {
     
     border: 1px solid transparent;
     border-radius: 4px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
                 0px 1px 2px rgba(0, 0, 0, 0.08), 
                 0px 2px 2px rgba(0, 0, 0, 0.12);
-    
+     */
 
     color: inherit;
     background-color: var(--color-background-team);
@@ -594,6 +739,9 @@ img {
 .btn-filters:focus {
     background-color: var(--color-logo-links-hover);
     color: var(--color-light);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ____________  К О Н Е Ц кнопки в ГЕРОЙ-ССЫЛКИ в portfolio.html ______________________ */
@@ -692,6 +840,14 @@ img {
     line-height: 1.88;
 
     color: var(--color-font-head);
+}
+
+/* =========  Hover & Focus на карточке фильтра в ПРОЕКТЫ (titlе-filter)  ======== */
+.project-item:hover,
+.project-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* __________________ К О Н Е Ц  ОСНОВНОГО Блока в portfolio.html __________________ */
