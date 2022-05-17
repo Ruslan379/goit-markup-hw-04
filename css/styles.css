@@ -190,6 +190,7 @@ img {
 .nav-contacts {
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .nav-contacts .header-item +.header-item {
@@ -209,37 +210,22 @@ img {
     align-items: center;
 }
 
-/* ========= Иконки в Контакты (почта и телефон) в header ========== */
-.header-item {
+/* ====+++++====== Иконки в Контакты (почта и телефон) в header ===+++++======= */
+.header-contacts-link {
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    
+    fill: var(--color-font-head);
+    /* fill: tomato; */
 }
 
-.header-contacts-link::before {
-    content: "";
-    display: inline-flex;
-    /* width: 16px; */
-    /* height: 12px; */
-    margin-right: 10px;
-    /* align-items: center; */
-    /* background-image: url("../svg/envelope.svg"); */
-    background-size: contain;
+.header-link-icon {
+    margin-right: 10px;}
 
-    /* background-color: tomato; */
-}
 
-.email::before {
-    width: 16px;
-    height: 12px;
-    background-image: url("../svg/envelope.svg");
-}
 
-.tel::before {
-    width: 10px;
-    height: 16px;
-    /* align-items: center; */
-    background-image: url("../svg/smartphone.svg");
-}
 
 /* ==== Стилизация Кнопок Основного раздела навигации в header ===== */
 .nav-links {
@@ -273,17 +259,15 @@ img {
 
 
 /* ====  Hover & Focus на ссылках и Контактах (почта и телефон) в header === */
-.nav-links.activlink:hover,
-.nav-links.activlink:focus,
-
 .nav-links:hover,
 .nav-links:focus,
 
-
-.header-contacts-link:hover,
-.header-contacts-link:focus
-
-{color: var(--color-logo-links-hover);}
+ .header-contacts-link:hover,
+ .header-contacts-link:focus {
+    
+    color: var(--color-logo-links-hover);
+    fill: var(--color-logo-links-hover);
+}
 
 /* _____________________________  К О Н Е Ц   (header) _____________________________ */
 
