@@ -7,6 +7,7 @@
     --color-background-another: #E5E5E5;
     --color-background-team: #F5F4FA;
     --color-background-footer: #2F303A;
+    --color-background-footer-icon: rgba(255, 255, 255, 0.1);
     /* =============================== */
     --color-light: #FFFFFF;
     --color-dark: #000000;
@@ -32,9 +33,6 @@ body {
 
 }
 
-/* svg:not(:root) {
-    overflow: auto;
-} */
 
 
 
@@ -600,7 +598,7 @@ img {
 }
 
 .clients-item {
-    /* display: flex; */
+    display: flex;
 
     width: 170px;
     height: 92px;
@@ -655,6 +653,62 @@ img {
 
 
 /* =============================== Стилизация footer =============================== */
+/* ==== flex-контейнер в footer (foot) ===== */
+.foot {
+    display: flex;
+
+    /* УБРАТЬ */
+    /* outline: 2px solid tomato;  */
+    /* background-color: rgb(43, 75, 64); */
+}
+
+.footers-addresses {
+
+    /* outline: 2px solid tomato; */
+}
+
+.footers-soc {
+    min-width: 206px;
+    margin-top: 12px;
+    margin-left: 70px;
+    
+    /* outline: 2px solid rgb(40, 2, 255); */
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.footers-soc-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footers-soc-item {
+    width: 44px;
+    height: 44px;
+}
+
+.footers-soc-link {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    align-items: center;
+    justify-content: center;
+
+    background-size: contain;
+    background-color: var(--color-background-footer-icon);
+
+    fill: var(--color-light);
+}
+
+.footers-soc-link:hover,
+.footers-soc-link:hover {
+    background-color: var(--color-logo-links-hover);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 /* ====== Цвет фона в footer ====== */
 .footers {
     padding-top: 60px;
@@ -684,6 +738,18 @@ img {
     line-height: 1.71;
     color: var(--color-font-footer);
 }
+
+/* ======== Ститлизация текста в блоке СОЦСЕТИ (footers-soc)========== */
+.footers-soc-titles {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--color-light);
+}
+
 
 /* ======  Hover & Focus на ссылках (почта и телефон) в footer ===== */
 .footers-contact-link:hover,
